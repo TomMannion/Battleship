@@ -28,10 +28,10 @@ class Output
   end
   def ask_for_ship(player)
     if player.boats_left[:carrier][1] > 0 then @io.puts "5. Carrier - Length: 5" else @io.puts "Carrier has been placed.".red end
-    #if player.boats_left[:battleship][1] > 0 then @io.puts "4. Battleship - Length: 4" else @io.puts "Battleship has been placed.".red end
-    #if player.boats_left[:cruiser][1] > 0 then @io.puts "3. Cruiser - Length: 3" else @io.puts "Cruiser has been placed.".red end 
-    #if player.boats_left[:submarine][1] > 0 then @io.puts "2. Submarine - Length: 3" else @io.puts "Submarine has been placed.".red end 
-    #if player.boats_left[:destroyer][1] > 0 then @io.puts "1. Destroyer - Length: 2" else @io.puts "Destroyer has been placed.".red end
+    if player.boats_left[:battleship][1] > 0 then @io.puts "4. Battleship - Length: 4" else @io.puts "Battleship has been placed.".red end
+    if player.boats_left[:cruiser][1] > 0 then @io.puts "3. Cruiser - Length: 3" else @io.puts "Cruiser has been placed.".red end 
+    if player.boats_left[:submarine][1] > 0 then @io.puts "2. Submarine - Length: 3" else @io.puts "Submarine has been placed.".red end 
+    if player.boats_left[:destroyer][1] > 0 then @io.puts "1. Destroyer - Length: 2" else @io.puts "Destroyer has been placed.".red end
     self.dialogue("#{player.name}"+" - Please enter a choice between 1-5 to choose a ship to place: ".red)
   end
   def get_coord(player)

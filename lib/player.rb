@@ -4,7 +4,7 @@ class Player
     @boat_array = Array.new(10) {Array.new(10, 0)}
     @saved_boat_array = []
     @shots_array = Array.new(10) {Array.new(10, ' ~ '.light_blue)}
-    @boat_placed = {carrier: [5,5]} #, battleship: [4,4], cruiser: [3,3], submarine: [2,3], destroyer: [1,2]
+    @boat_placed = {carrier: [5,5], battleship: [4,4], cruiser: [3,3], submarine: [2,3], destroyer: [1,2]}
   end
 
   def set_name_color(name)
